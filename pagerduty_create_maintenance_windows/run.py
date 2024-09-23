@@ -4,8 +4,9 @@ import json
 from datetime import datetime
 import pytz
 
-# Set your API key
-API_KEY = 'u+RweVcw1PT3jnXxnx8g'
+# Read the API key from a text file
+with open('api_key.txt', 'r') as file:
+    API_KEY = file.read().strip()  # Read the API key and remove any surrounding whitespace
 
 # Read the Excel file
 excel_file = 'maintenance_windows.xlsx'
